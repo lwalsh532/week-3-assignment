@@ -1,4 +1,4 @@
-// a crowdsourced dataset of favorite pizza places we made in class
+// eviction data uploaded
 const evictionData =
     [
         {
