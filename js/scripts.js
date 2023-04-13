@@ -100,7 +100,6 @@ const NYC_COORDINATES = [-74.00214, 40.71882]
 
 const map = new mapboxgl.Map({
     container: 'map', // container ID
-    // Choose from Mapbox's core styles, or make your own style with Mapbox Studio
     style: 'mapbox://styles/mapbox/light-v11', // style URL
     center: NYC_COORDINATES, // starting position [lng, lat]
     zoom: 10, // starting zoom
@@ -112,12 +111,11 @@ const map = new mapboxgl.Map({
 
 evictionData.forEach(function (evictionRecord) {
     const popup = new mapboxgl.Popup({ offset: 20 }).setText(
-        `The address of this property owned by Jonathan Santana is ${evictionRecord['address']}. It currently has ${evictionRecord['total_hpd_violations']} unresolved HPD violations as of 2022.`
+        `The address of this property owned by Jonathan Santana is ${evictionRecord['address']}. It has ${evictionRecord['total_hpd_violations']} unresolved HPD violations as of 2022.`
     );
 
-    // figure out the color of the marker based on the program variable
 
-    // by default, use gray
+    // using the color orange for all my buildings given they are all owned by the same landlord.
     let color = '#f78002'
 
 
